@@ -60,8 +60,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Repository\RepositoryResult.cs" />
+    <Compile Include="ConfirmCreateWorkBook.xaml.cs">
+      <DependentUpon>ConfirmCreateWorkBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\CustomAttribute.cs" />
+    <Compile Include="Core\TypeTranslator.cs" />
+    <Compile Include="Extention\String.cs" />
+    <Compile Include="Model\Character\CharacterMaster.cs" />
+    <Compile Include="Model\Character\RankMaster.cs" />
+    <Compile Include="Model\Stage\StageMaster.cs" />
+    <Compile Include="Model\Stage\StageWaveMaster.cs" />
+    <Compile Include="Model\User\EquipCharacter.cs" />
+    <Compile Include="Repository\AnyActionResult.cs" />
+    <Compile Include="Repository\ExcelDataRepository.cs" />
     <Compile Include="Repository\WorkBook.cs" />
+    <Page Include="ConfirmCreateWorkBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,7 +86,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Repository\ExcelRepository.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -105,7 +120,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\Error\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

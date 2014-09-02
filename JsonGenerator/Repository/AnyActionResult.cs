@@ -7,24 +7,24 @@ using System.Threading.Tasks;
 
 namespace JsonGenerator.Repository
 {
-    public class RepositoryResult
+    public class AnyActionResult
     {
         public RepositoryResultCode ResultCode { get; private set; }
 
         public string Message { get; private set; }
 
-        public static RepositoryResult Success(string message = "")
+        public static AnyActionResult Success(string message = "")
         {
-            return new RepositoryResult
+            return new AnyActionResult
             {
                 ResultCode = RepositoryResultCode.Success,
                 Message = message,
             };
         }
 
-        public static RepositoryResult Failed(string message = "")
+        public static AnyActionResult Failed(string message = "")
         {
-            return new RepositoryResult
+            return new AnyActionResult
             {
                 ResultCode = RepositoryResultCode.Failed,
                 Message = message,
